@@ -1,0 +1,129 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body{
+    background: linear-gradient(rgb(249, 195, 78),rgb(244, 128, 40)) no-repeat;
+}
+
+nav{
+    background-color:aquamarine;
+    height: 70px;
+    font-size: 25px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0px 10px 10px rgba(0, 0, 0, .3);
+}
+
+nav ul{
+    list-style: none;
+    margin: 0 15px;
+}
+
+.game{
+    display: flex;
+    justify-content: center;
+    padding-top: 50px;
+}
+
+.container{
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,10vw);
+    grid-template-rows: repeat(3,10vw);
+}
+
+.line{
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color: black;
+    transition: width 1s ease-in-out;
+}
+
+.box{
+    border: 2px solid black;
+    font-size: 8vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.box:hover{
+    background-color: rgba(224, 188, 255,.4);
+}
+
+/* utility border */
+.bl{
+    border-left: 0;
+}
+.br{
+    border-right: 0;
+}
+.bt{
+    border-top: 0;
+}
+.bb{
+    border-bottom: 0;
+}
+
+.gameinfo{
+    padding: 0 35px;
+}
+
+.imgbox img{
+    width: 30vw;
+    visibility: hidden;
+    transition: visibility 1s ease-in-out;
+}
+
+.info{
+    font-size: 20px;
+    
+}
+
+#reset{
+    margin: 0 20px;
+    padding: 6px 18px;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: rgb(18, 157, 222);
+    cursor: pointer;
+}
+
+#reset:hover{
+    color: white;
+}
+
+footer{
+    height:30px;
+    text-align: center;
+}
+
+@media screen and (max-width:900px){
+    .game{
+        flex-wrap: wrap;
+    }
+
+    .gameinfo{
+        margin-top: 40px;
+    }
+
+    .gameinfo h1{
+        font-size: 1.75rem;
+    }
+
+    .container{
+        grid-template-columns: repeat(3,20vw);
+        grid-template-rows: repeat(3,20vw);
+    }
+
+    .line{
+        display: none;
+    }
+}
